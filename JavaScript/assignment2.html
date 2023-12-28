@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Array and String Methods in JavaScript</title> 
+</head> 
+<body> 
+  <script> 
+    // Array Methods 
+    let numbers = [1, 2, 3, 4, 5]; 
+
+    // Join array elements into a string 
+    let joinedString = numbers.join(', '); 
+    console.log('Joined String:', joinedString); 
+
+    // Add elements to the end of an array 
+    numbers.push(6, 7); 
+    console.log('After Push:', numbers); 
+
+    // Remove the last element from an array 
+    numbers.pop(); 
+    console.log('After Pop:', numbers); 
+
+    // Remove the first element from an array 
+    numbers.shift(); 
+    console.log('After Shift:', numbers); 
+
+    // Add elements to the beginning of an array 
+    numbers.unshift(0); 
+    console.log('After Unshift:', numbers); 
+
+    // Get a slice of an array 
+    let slicedArray = numbers.slice(1, 4); 
+    console.log('Sliced Array:', slicedArray); 
+
+     // Splice elements into an array 
+     numbers.splice(1, 2, 8, 9); 
+     console.log('After Splice:', numbers); 
+
+    // Find the index of an element in an array 
+     let index = numbers.indexOf(5); 
+    console.log('Index of 5:', index); 
+
+    // Check if an element exists in an array 
+    let exists = numbers.includes(3); 
+    console.log('3 exists in array:', exists); 
+
+    // Reverse the order of elements in an array 
+    numbers.reverse(); 
+    console.log('After Reverse:', numbers); 
+
+     // Sort elements in an array 
+     numbers.sort((a, b) => a - b); 
+     console.log('After Sort:', numbers); 
+
+    // String Methods 
+    let str = 'JavaScript is awesome!'; 
+
+    // Convert to uppercase 
+    let uppercaseStr = str.toUpperCase(); 
+    console.log('Uppercase:', uppercaseStr); 
+
+    // Convert to lowercase 
+    let lowercaseStr = str.toLowerCase(); 
+    console.log('Lowercase:', lowercaseStr); 
+
+    // Get the length of the string 
+    let length = str.length; 
+    console.log('Length:', length); 
+
+    // Find the index of a substring 
+    let indexSubstring = str.indexOf('is'); 
+    console.log('Index of "is":', indexSubstring); 
+
+    // Get a substring 
+    let substring = str.substring(4, 10); 
+    console.log('Substring:', substring); 
+
+    // Replace a substring 
+    let replacedStr = str.replace('awesome', 'amazing'); 
+    console.log('Replaced String:', replacedStr); 
+
+    // Split the string into an array 
+    let splitArray = str.split(' '); 
+    console.log('Split Array:', splitArray); 
+
+  </script> 
+</body> 
+</html> 

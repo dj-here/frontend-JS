@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Different Ways to Create a Function</title> 
+</head> 
+<body> 
+  <script> 
+    // Function Declaration 
+    function greet1(name) { 
+      console.log('Hello, ' + name + ' (Function Declaration)'); 
+    } 
+    greet1('Alice'); 
+
+     // Function Expression (Anonymous Function) 
+    const greet2 = function(name) { 
+      console.log('Hello, ' + name + ' (Function Expression)'); 
+    }; 
+    greet2('Bob'); 
+
+    // Arrow Function (ES6) 
+    const greet3 = (name) => { 
+      console.log('Hello, ' + name + ' (Arrow Function)'); 
+    }; 
+    greet3('Charlie'); 
+
+    // Function Constructor (Not Recommended) 
+    const greet4 = new Function('name', 'console.log("Hello, " + name + " (Function Constructor)");'); 
+    greet4('Dave'); 
+
+    // Immediately Invoked Function Expression (IIFE) 
+    (function(name) { 
+      console.log('Hello, ' + name + ' (IIFE)'); 
+    })('Eve'); 
+
+    // Generator Function (ES6) 
+    function* greetGenerator() { 
+      yield 'Hello'; 
+      yield 'World'; 
+    } 
+    const generator = greetGenerator(); 
+    console.log(generator.next().value + ', ' + generator.next().value + ' (Generator Function)'); 
+
+    // Returning a Function from Another Function 
+    function createGreetFunction(greeting) { 
+      return function(name) { 
+        console.log(greeting + ', ' + name + ' (Returned Function)'); 
+      }; 
+    } 
+    const greet5 = createGreetFunction('Hey'); 
+    greet5('Frank'); 
+
+    // Function inside an Object (Method) 
+    const person = { 
+      name: 'Grace', 
+      greet: function() { 
+        console.log('Hello, ' + this.name + ' (Object Method)'); 
+      } 
+    }; 
+    person.greet(); 
+  </script> 
+</body> 
+</html> 

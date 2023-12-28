@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ES6 Concept</title>
+    </head>
+    <body>
+        <script>
+             
+
+//let and const (Block-scoped variables): 
+
+let variable = 10; 
+
+const constantValue = 42; 
+
+ 
+
+//Arrow Functions 
+
+const add = (a, b) => a + b; 
+
+ 
+
+//Template Literals 
+
+const name = "John"; 
+
+console.log(`Hello, ${name}!`); // Output: Hello, John 
+
+ 
+
+//Destructuring assignment 
+
+const person = { name: "Alice", age: 30 }; 
+
+const { name, age } = person; 
+
+ 
+
+ 
+
+//Spread syntax (for arrays and objects) 
+
+const arr = [1, 2, 3]; 
+
+const newArr = [...arr, 4, 5]; 
+
+ 
+
+console.log(newArr); //Output: [1,2,3,4,5] 
+
+ 
+
+const obj1 = { x: 1, y: 2 }; 
+
+const obj2 = { ...obj1, z: 3 }; 
+
+ 
+
+console.log(obj2); // { x:1, y: 2, z: 3} 
+
+ 
+
+//Rest Parameters 
+
+const sum = (...numbers) => numbers.reduce((acc, curr) => acc + curr, 0); 
+
+console.log(sum(1, 2, 3, 4));  //Output: 10 
+
+ 
+
+//Default Parameters 
+
+const greet = (name = "Anonymous") => `Hello, ${name}!`; 
+
+console.log(greet()); // Hello, Anonymous! 
+
+console.log(greet("Bob")); // Hello, Bob! 
+
+ 
+
+//Object Literals 
+
+const age = 25; 
+
+const person = { 
+
+  name: "John", 
+
+  age, // Equivalent to age: age 
+
+  sayHello() { 
+
+    console.log("Hello!"); 
+
+  }, 
+
+}; 
+
+ 
+
+Classes 
+
+class Rectangle { 
+
+  constructor(width, height) { 
+
+    this.width = width; 
+
+    this.height = height; 
+
+  } 
+
+  getArea() { 
+
+    return this.width * this.height; 
+
+  } 
+
+} 
+
+ 
+
+const rect = new Rectangle(5, 10); 
+
+console.log(rect.getArea()); //Output: 50 
+
+ 
+
+//Modules 
+
+// math.js 
+
+export const add = (a, b) => a + b; 
+
+ 
+
+// main.js 
+
+import { add } from './math.js'; 
+
+console.log(add(2, 3)); // Output: 5 
+
+ 
+
+//Promises 
+
+const fetchData = () => { 
+
+  return new Promise((resolve, reject) => { 
+
+    setTimeout(() => { 
+
+      resolve("Data fetched!"); 
+
+    }, 2000); 
+
+  }); 
+
+}; 
+
+ 
+
+fetchData() 
+
+  .then((data) => console.log(data)) 
+
+  .catch((error) => console.error(error)); 
+
+ 
+
+//Async Await 
+
+const fetchData = () => { 
+
+  return new Promise((resolve, reject) => { 
+
+    setTimeout(() => { 
+
+      resolve("Data fetched!"); 
+
+    }, 2000); 
+
+  }); 
+
+}; 
+
+ 
+
+async function fetchDataAsync() { 
+
+  try { 
+
+    const data = await fetchData(); 
+
+    console.log(data); 
+
+  } catch (error) { 
+
+    console.error(error); 
+
+  } 
+
+} 
+
+ 
+
+fetchDataAsync(); 
+ 

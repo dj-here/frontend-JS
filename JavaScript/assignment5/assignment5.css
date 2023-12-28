@@ -1,0 +1,37 @@
+.draglist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .drag-item {
+    border: 1px solid #000;
+    box-sizing: border-box;
+    flex: 0 0 100px;
+    height: 100px;
+    user-select: none;
+  }
+  
+  .enter {
+    background: #D0782A;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+  }
+  
+  #zone {
+    float: right;
+    border: 2px dashed;
+    width: 200px;
+    height: 200px;
+  }
